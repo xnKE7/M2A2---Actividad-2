@@ -22,7 +22,7 @@ try{
 import { crearTabla } from"./funcionesAvanzadas.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("boton").addEventListener("click", leerDatos);
+    document.getElementById("boton").addEventListener("click", valores);
 });
 
 
