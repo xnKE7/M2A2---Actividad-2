@@ -1,17 +1,18 @@
-function valores(){
-    let filas = document.getElementById("filas").value;
-    let columnas = document.getElementById("columnas").value;
-    let codigo = "";
-    codigo = codigo + "<table border='1'>"
-    for(let x = 0; x<filas; x++){
-       codigo = codigo + "<tr>"
-       for (let y = 0; y<columnas; y++){
-        codigo = codigo + "<td>"+x+","+y;
+function valores() {
+    let filas = parseInt(document.getElementById("filas").value);
+    let columnas = parseInt(document.getElementById("columnas").value);
+    crearTabla(filas, columnas);
+}
 
-        codigo = codigo + "</td>"
-       }
-       codigo = codigo + "</tr>"
+function crearTabla(filas, columnas) {
+    let codigo = "<table border='1'>";
+    for(let x = 0; x < filas; x++) {
+        codigo += "<tr>";
+        for(let y = 0; y < columnas; y++) {
+            codigo += "<td>" + x + "," + y + "</td>";
+        }
+        codigo += "</tr>";
     }
-    codigo = codigo + "</table>"
+    codigo += "</table>";
     document.getElementById("tabla").innerHTML = codigo;
 }
