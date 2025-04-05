@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Styles/estilo.css">
+    <script type="text/javascript" src="Scripts/funciones.js"></script>
+    <title>M2A2</title>
+</head>
+<body>
+        <div class="container">
+            <h2>Formulario</h2>
+            <form>
+                <div>
+                    <label for="columnas">Filas</label>
+                    <input type="number" value="3" min="1" max="10" class="form-control" id="filas" required>
+                </div>
+                <div>
+                    <label for="filas">Columnas</label>
+                    <input type="number" value="3" min="1" max="10" class="form-control" id="columnas" required>
+                </div>
+                <button type="button" onclick="valores()">Crear</button>
+            </form>
+        </div>
+        <div id="tabla"></div>
+</body>
+</html>
