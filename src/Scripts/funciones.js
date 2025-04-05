@@ -1,7 +1,7 @@
 function valores() {
     let filas = parseInt(document.getElementById("filas").value);
     let columnas = parseInt(document.getElementById("columnas").value);
-
+try{
     if (isNaN(filas) || isNaN(columnas)) {
         alert("Los valores no son numericos");
         return;
@@ -13,6 +13,10 @@ function valores() {
     }
 
     crearTabla(filas, columnas);
+   }
+   catch{
+    alert("Error: " + error.message);
+   }
 }
 
 function crearTabla(filas, columnas) {
@@ -31,7 +35,7 @@ function crearTabla(filas, columnas) {
         }
         tabla.appendChild(fila);
     }
-    
+
     contenedor.appendChild(tabla);
 }
 
